@@ -12,8 +12,14 @@ function StartGame() {
                 autoFocus={true}
                 autoCorrect={false}
             />
-            <PrimaryButton childern={'Reset'} />
-            <PrimaryButton childern={'Confirm'} />
+            <View style={styles.buttonsContainer}>
+                <View style={styles.buttonContainer}>
+                    <PrimaryButton childern={'Reset'} />
+                </View>
+                <View style={styles.buttonContainer}>
+                    <PrimaryButton childern={'Confirm'} />
+                </View>
+            </View>
         </View>
     );
 }
@@ -22,10 +28,12 @@ export default StartGame;
 
 const styles = StyleSheet.create({
     inputContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
         marginTop: 100,
         marginHorizontal: 24,
         padding: 16,
-        backgroundColor: '#72063c',
+        backgroundColor: '#4e0329',
         borderRadius: 8,
         elevation: 5,
         shadowColor: '#000',
@@ -43,5 +51,11 @@ const styles = StyleSheet.create({
         marginVertical: 8,
         fontWeight: 'bold',
         textAlign: 'center',
+    },
+    buttonsContainer: {
+        flexDirection: 'row'
+    },
+    buttonContainer: {
+        flex: 1
     }
 });
